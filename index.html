@@ -560,7 +560,282 @@ header {
 }
 
 
+}.portfolio-wrapper {
+  background: linear-gradient(to bottom, #f5f7fa, #ffffff);
+  width: 100%;
+  padding: 100px 20px;
 }
+
+.portfolio-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.portfolio-section h2 {
+  font-size: 3rem;
+  color: #0a1446;
+  text-align: center;
+  margin-bottom: 80px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+.portfolio-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #0a1446;
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.portfolio-item {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 30px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.025);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.project-info {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-info:hover {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.project-info h3 {
+  font-size: 1.9rem;
+  color: #0a1446;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.project-info p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Botão com ícone */
+.project-info a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 14px 28px;
+  background-color: #0a1446;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 20px rgba(10, 20, 70, 0.25);
+}
+
+.project-info a::after {
+  content: '→';
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.project-info a:hover::after {
+  transform: translateX(4px);
+}
+
+.project-info a:hover {
+  background-color: #1e2a78;
+  transform: scale(1.06);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .portfolio-item {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .project-image img,
+  .project-info {
+    max-width: 100%;
+  }
+
+  .project-info {
+    text-align: center;
+  }
+
+  .project-info a {
+    justify-content: center;
+  }
+}
+
+/*sobre*/
+.sobre-foordev {
+  background-color: #f2f3f7;
+  padding: 100px 20px;
+}
+
+.sobre-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(220, 230, 255, 0.3));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 100%;
+  color: #0a1446;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.15), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.glass-card h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.glass-card h1 strong {
+  color: #0a1446;
+  font-weight: 800;
+}
+
+.lista-itens {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.lista-itens li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.bolinha {
+  width: 10px;
+  height: 10px;
+  background-color: #007bff;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.azul {
+  color: #007bff;
+  font-weight: 500;
+}
+
+.lista-itens a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.lista-itens a:hover {
+  text-decoration: underline;
+}
+
+.logo-area img {
+  max-width: 300px;
+  width: 100%;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .sobre-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .glass-card {
+    max-width: 100%;
+  }
+
+  .logo-area img {
+    max-width: 200px;
+  }
+}
+
+
+
+
+
+
 
 
   </style>
@@ -568,7 +843,7 @@ header {
 <body>
   <header>
    <header>
-  <div class="logo">Site em manutenção.</div>
+  <div class="logo">Foordev</div>
 
   <button class="menu-toggle" aria-label="Abrir menu">
     &#9776;
@@ -576,7 +851,7 @@ header {
 
   <nav class="nav-links">
     <a href="#">Início</a>
-    <a href="#">Projetos</a>
+    <a href="#">Portfólio</a>
     <a href="#">Sobre</a>
     <a href="#">Contato</a>
   </nav>
@@ -597,91 +872,99 @@ header {
       </div>
     </div>
   </section>
+
+<div class="portfolio-wrapper">
+  <section class="portfolio-section" id="projetos">
+    <h2>Portfólio</h2>
+
+    <div class="portfolio-list">
+      <div class="portfolio-item">
+        <div class="project-image">
+          <img src="img/throw.jpeg" alt="Throw Burguer">
+        </div>
+        <div class="project-info">
+          <h3>Throw Burguer</h3>
+          <p>Site desenvolvido como projeto de TCC para o curso, simulando um sistema de pedidos online para uma lanchonete. A interface foi pensada para facilitar o atendimento rápido, com destaque para os produtos, integração com WhatsApp e design responsivo.</p>
+          <a href="#" target="_blank">Ver Projeto</a>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="project-image">
+          <img src="img/brocss.png" alt="Broccs">
+        </div>
+        <div class="project-info">
+          <h3>Broccs</h3>
+          <p>Landing page criada como projeto pessoal para uma empresa fictícia de seguros. O foco foi transmitir confiança e profissionalismo, com um layout limpo, chamadas para ação estratégicas e compatibilidade total com dispositivos móveis.
+
+</p>
+          <a href="#" target="_blank">Ver Projeto</a>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="project-image">
+          <img src="img/landi.png" alt="M Design">
+        </div>
+        <div class="project-info">
+          <h3>M Design</h3>
+          <p>Página moderna e funcional voltada para desenvolvedores que desejam exibir seus projetos e facilitar o contato com clientes. Design minimalista, seções bem definidas e botão direto para o WhatsApp.
+
+</p>
+          <a href="#" target="_blank">Ver Projeto</a>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="project-image">
+          <img src="img/lan.png" alt="Brand Web">
+        </div>
+        <div class="project-info">
+          <h3>Brand Web</h3>
+          <p>Site desenvolvido para oferecer atendimento digital personalizado, com foco na praticidade e na experiência do usuário. Integração com canais de contato e visual direto ao ponto.</p>
+          <a href="#" target="_blank">Ver Projeto</a>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="project-image">
+          <img src="img/comu.png" alt="Brand with Digital">
+        </div>
+        <div class="project-info">
+          <h3>Nusa Tech</h3>
+          <p>Página institucional criada para uma empresa de marketing digital. Visual criativo, seção de serviços com destaque e foco em conversão, refletindo a identidade moderna e estratégica da marca.</p>
+          <a href="#" target="_blank">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!--
- <section class="projects" id="projetos">
-  <h2>Projetos</h2>
-
-  <div class="filters category-menu">
-    <button class="active">Landing Pages</button>
-    <button>Sites</button>
-    <button>Lojas Virtuais</button>
-    <button>Portfólio</button>
-    
-  </div>
-
-  <div class="projects-grid">
-    <div class="project-card">
-      <img src="img/throw.jpeg" alt="Throw Burguer">
-      <h3>Throw Burguer</h3>
-      <p>Um site completo de uma rede de fast food</p>
-      <a href="#" class="btn">Ver Projeto →</a>
-    </div>
-
-    <div class="project-card">
-      <img src="img/brocss.png" alt="Broccs">
-      <h3>Broccs</h3>
-      <p>Landing Page de serviços online</p>
-      <a href="#" class="btn">Ver Projeto →</a>
-    </div>
-
-    <div class="project-card">
-      <img src="img/lan.png" alt="Brand Web">
-      <h3>Brand Web</h3>
-      <p>Site completo de atendimentos integrados</p>
-      <a href="#" class="btn">Ver Projeto →</a>
-    </div>
-
-    <div class="project-card">
-      <img src="img/landi.png" alt="M Design">
-      <h3>M Design</h3>
-      <p>Landing Page de trabalho de designer</p>
-      <a href="#" class="btn">Ver Projeto →</a>
-    </div>
-
-    <div class="project-card">
-      <img src="img/comu.png" alt="Brand with Digital">
-      <h3>Brand with Digital</h3>
-      <p>Site de comunicação</p>
-      <a href="#" class="btn">Ver Projeto →</a>
-    </div>
-
-    <div class="project-card">
-      <img src="img/brocss.png" alt="Broccs">
-      <h3>Broccs</h3>
-      <p>Landing Page de serviços online</p>
-      <a href="#" class="btn">Ver Projeto →</a>
-    </div>
-    
-  </div>
-</section>
-
-
-<section class="foordev-section">
-  <div class="glass-card">
-    <div class="header-card">
+<section class="sobre-foordev">
+  <div class="sobre-container">
+    <div class="glass-card">
       <h1>
-        Somos a <span>Foordev</span><br>
+        <span>Somos a <strong>Foordev</strong></span><br>
         Seu parceiro em<br>
         <strong>soluções digitais</strong>
       </h1>
-      <div class="icons">
-        <i class="fab fa-whatsapp"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fas fa-arrow-up"></i>
-      </div>
+      <ul class="lista-itens">
+        <li><span class="bolinha"></span> Conectando ideias a partir de <span class="azul">São Paulo, Brasil</span></li>
+        <li><span class="bolinha"></span> Focados em oferecer soluções criativas e eficientes para web</li>
+        <li><span class="bolinha"></span> Especializados em desenvolvimento de sites, design e automações</li>
+        <li><span class="bolinha"></span> Nossa missão: simplificar a tecnologia para negócios e empreendedores, <span class="azul">video editor</span>, <span class="azul">web developer</span> e mais</li>
+        <li><span class="bolinha"></span> Contato: <a href="mailto:contato@foordev.com">contato@foordev.com</a></li>
+      </ul>
     </div>
 
-    <ul class="lista-itens">
-      <li><span class="bolinha"></span> Conectando ideias a partir de <span class="azul">São Paulo, Brasil</span></li>
-      <li><span class="bolinha"></span> Focados em oferecer soluções criativas e eficientes para web</li>
-      <li><span class="bolinha"></span> Especializados em desenvolvimento de sites, design e automações</li>
-      <li><span class="bolinha"></span> Nossa missão: simplificar a tecnologia para negócios e empreendedores, video editor, web developer e ...</li>
-      <li><span class="bolinha"></span> Contato: <a href="mailto:contato@foordev.com">contato@foordev.com</a></li>
-    </ul>
+    <div class="logo-area">
+      <img src="img/logoo.png" alt="Logo da Foordev">
+    </div>
   </div>
 </section>
 
--->
+
 
 <script>
   const toggleButton = document.querySelector(".menu-toggle");
@@ -692,7 +975,7 @@ header {
   });
 </script>
 
-
+-->
 
 
 </body>
